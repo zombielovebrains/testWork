@@ -1,0 +1,128 @@
+.main-nav {
+  position: fixed;
+  top: 58px;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+
+  background-color: $blue;
+  transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+
+  &--active {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.main-nav__item {
+  padding: 12px 15px;
+}
+
+.main-nav__link {
+  font-family: $PT;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+
+  &--expand {
+    padding: 0;
+
+    i {
+      display: inline-block;
+      width: 11px;
+      height: 5px;
+      background: url("../img/arrow.svg") center no-repeat;
+      background-size: cover;
+      margin-top: 8px;
+      margin-left: 6px;
+    }
+
+    &:hover {
+      color: $yellow;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $red;
+      text-decoration: none;
+    }
+  }
+}
+
+.main-nav__list--rightcol {
+  margin-top: 20px;
+}
+
+@media(min-width: 768px) {
+  .main-nav {
+    top: 74px;
+    padding: 0 24px;
+  }
+
+  .main-nav__item {
+    padding: 15px 15px;
+  }
+}
+
+@media(min-width: 994px) {
+  .main-nav {
+    position: static;
+    z-index: 1;
+    visibility: visible;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .main-nav__list {
+    display: flex;
+
+    &--rightcol {
+      margin-top: 0;
+    }
+  }
+
+  .main-nav__item {
+    padding: 0 15px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  .main-nav__link {
+    font-size: 16px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .main-nav__list {
+    &--leftcol {
+      .main-nav__item{
+        padding-left: 0;
+        padding-right: 61px;
+        &:first-of-type {
+          padding-right: 44px;
+        }
+
+      }
+    }
+  }
+
+
+
+
+
+  .main-nav__link {
+    font-size: 16px;
+  }
+}

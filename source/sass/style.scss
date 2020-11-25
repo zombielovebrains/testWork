@@ -1,0 +1,95 @@
+@import "var.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main-screen.scss";
+@import "blocks/default.scss";
+@import "blocks/offer-card.scss";
+@import "blocks/product-card.scss";
+@import "blocks/partners.scss";
+@import "blocks/footer.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $yellow;
+    text-decoration: none;
+  }
+  &:active {
+    color: $red;
+    text-decoration: none;
+  }
+  &:focus {
+    outline: 2px solid $green;
+    outline-offset: 2px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+  outline-color: transparent;
+  cursor: pointer !important;
+
+  &:focus {
+    outline: 2px solid $green;
+    outline-offset: 2px;
+  }
+}
+
+button,
+button:active {
+  outline: none;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+@media ( min-width: 1200px) {
+  .container {
+    max-width: 1090px;
+  }
+}
+
