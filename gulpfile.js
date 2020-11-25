@@ -32,8 +32,8 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
+    // .pipe(rename("style.min.css"))
+    // .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
@@ -41,7 +41,8 @@ gulp.task("css", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/img/**",
-    "source/css/normalize.css"
+    "source/css/normalize.css",
+    "source/js/**"
   ], {
     base: "source"
   })
