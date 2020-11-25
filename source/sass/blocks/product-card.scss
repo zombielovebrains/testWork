@@ -87,6 +87,10 @@
 .product-card__link {
   text-decoration: underline;
   color: $linkBlue;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 @media(min-width: 992px) {
